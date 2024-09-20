@@ -9,19 +9,23 @@
         </div>
         <div class="row vh-100 align-items-center justify-content-center">
             <div class="col-12 m-0 d-flex justify-content-center">
-                <form class="form-custom" method="POST" action="{{route('article.store')}}">
+                <form class="form-custom" method="POST" action="{{route('article.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Bicicletta rossa" required>
+                        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Bicicletta rossa">
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Descrizione</label>
-                        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Descrizione dell'articolo" required></textarea>
+                        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Descrizione dell'articolo"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" class="form-control" id="price" name="price" placeholder="10€" required>
+                        <input type="text" class="form-control" id="price" name="price" placeholder="10€">
+                    </div>
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Inserisci un'immagine</label>
+                        <input type="file" class="form-control" id="img" name="img">
                     </div>
                     <button type="submit" class="btn btn-primary">Aggiungi l'articolo</button>
                 </form>

@@ -8,17 +8,9 @@
             </div>
         </div>
     </header>
-    <section class="col-12 vh-100 my-1 d-flex justify-content-center" id="wrapper">
+    <section class="col-12 vh-100 my-1 d-flex justify-content-center flex-wrap">
         @foreach($articles as $article)
-        <div class="card mx-auto card-custom">
-            <div class="card-body d-flex flex-column align-items-center flex-wrap">
-                <img src="https://picsum.photos/200" alt="Immagine dell'articolo" class="img-fluid mb-2">
-                <h4 class="card-title text-center">{{$article->title}}</h4>
-                <h6 class="card-subtitle mb-2 text-body-secondary text-center">{{$article->description}}</h6>
-                <p class="card-text text-center">{{$article->price}}€</p>
-                <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-            </div>
-        </div>
+        <x-card :article="$article"/>
         @endforeach
     </section>
 </x-layout>

@@ -9,7 +9,10 @@ class FormController extends Controller
 {
 
     public function store(Request $request){
-        Article::create($request->all());
+        $title = $request->title;
+        $description = $request->description;
+        $price = $request->price;
+        $img = $request->file('img')->store('public/img');
 
         return redirect()->back()->with('message', 'Articolo inserito correttamente, verifica che sia presente nella pagina I nostri articoli');
     }
