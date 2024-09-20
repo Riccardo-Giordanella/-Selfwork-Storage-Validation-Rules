@@ -14,7 +14,8 @@ class FormController extends Controller
         $price = $request->price;
         $img = $request->file('img')->store('public/img');
 
-        return redirect()->back()->with('message', 'Articolo inserito correttamente, verifica che sia presente nella pagina I nostri articoli');
+        return redirect()->back()->with('message', 'Articolo inserito correttamente, verifica che sia presente nella pagina "I nostri articoli"');
+
     }
 
     public function article(){

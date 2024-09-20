@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-md sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{route('homepage')}}">
       <img src="media/logo.png" alt="logo" class="img-fluid logo d-inline-block align-text-center">
