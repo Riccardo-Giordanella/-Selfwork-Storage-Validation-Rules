@@ -14,7 +14,15 @@ class FormController extends Controller
         $price = $request->price;
         $img = $request->file('img')->store('public/img');
 
+        Article::create([
+            'title' => $title,
+            'description' => $description,
+            'price' => $price,
+            'img' => $img,
+        ]);
+
         return redirect()->back()->with('message', 'Articolo inserito correttamente, verifica che sia presente nella pagina "I nostri articoli"');
+
 
     }
 
