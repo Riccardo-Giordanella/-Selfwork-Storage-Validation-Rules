@@ -78,3 +78,7 @@ body{
 .card-custom:hover{
     transform: scale(1.05);
 }
+
+.custom-d{
+    border-radius: 10%;
+}
