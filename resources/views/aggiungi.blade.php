@@ -22,15 +22,15 @@
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Bicicletta rossa" value="{{old}}">
+                        <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="Bicicletta rossa" value="{{old('title')}}">
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Descrizione</label>
-                        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Descrizione dell'articolo" value="{{old}}"></textarea>
+                        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Descrizione dell'articolo" value="{{old('description')}}"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" class="form-control" id="price" name="price" placeholder="10€" value="{{old}}">
+                        <input type="text" class="form-control" id="price" name="price" placeholder="10€" value="{{old('price')}}">
                     </div>
                     <div class="mb-3">
                         <label for="img" class="form-label">Inserisci un'immagine</label>
